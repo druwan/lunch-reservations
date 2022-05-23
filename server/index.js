@@ -3,9 +3,15 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
 
+import customerRoutes from './routes/customersRoutes.js';
+
 const app = express();
 
 app.use(cors());
+app.use('/', (req, res) => {
+  res.send('Server UP');
+});
+app.use('/customers', customerRoutes);
 
 const dbConnect = async () => {
   try {
