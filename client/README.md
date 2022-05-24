@@ -1,9 +1,10 @@
 # Lunch Reservations Front-End
 
-## Status
+## Todos
 
-- [] Super basic layout
-- [] Add Menu
-- [] Implement Login
-- [] Implement Auth
-- [] Implement confirmation
+- Super basic layout
+- Styling
+- Add Menu
+- Implement Login
+- Implement Auth
+- Implement confirmation
