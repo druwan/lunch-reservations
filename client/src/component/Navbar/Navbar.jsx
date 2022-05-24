@@ -34,7 +34,7 @@ const Logo = () => {
           fontSize='20'
           ml={3}
         >
-          Gott Gott i gott gott
+          Lunch Reservations
         </Text>
       </Logobox>
     </a>
