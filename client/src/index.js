@@ -1,3 +1,5 @@
+import '@fontsource/yaldevi/600.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -13,6 +15,10 @@ const slTheme = extendTheme({
       slGreen: '#00534e',
       slBlue: '#2B334F',
     },
+  },
+  fonts: {
+    heading: 'Yaldevi, sans-serif',
+    body: 'Yaldevi, sans-serif',
   },
 });
 
