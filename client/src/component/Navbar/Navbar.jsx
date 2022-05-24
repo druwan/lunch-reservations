@@ -34,7 +34,7 @@ const Logo = () => {
           fontSize='20'
           ml={3}
         >
-          Lunch Reservations
+          Lunch Reservations මමපඞ
         </Text>
       </Logobox>
     </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
         alignItems='center'
       >
         <Flex align='center' mr={5}>
-          <Heading as='h1' size='lg' letterSpacing={'tighter'}>
+          <Heading as='h1' size='lg' letterSpacing={'tight'}>
             <Logo />
           </Heading>
         </Flex>
