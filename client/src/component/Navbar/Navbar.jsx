@@ -10,7 +10,7 @@ import {
 import styled from '@emotion/styled';
 
 import React from 'react';
-import Btn from '../Button/Btn';
+import AuthButton from '../Buttons/AuthButton';
 import ToggleTheme from '../Theme/ToggleTheme';
 
 const Logobox = styled.span`
@@ -57,7 +57,7 @@ const Navbar = () => {
           </Heading>
         </Flex>
         <Box flex={1} align='right'>
-          <Btn />
+          <AuthButton />
           <ToggleTheme />
         </Box>
       </Container>
