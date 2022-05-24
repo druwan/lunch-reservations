@@ -10,7 +10,7 @@ import {
 import styled from '@emotion/styled';
 
 import React from 'react';
-import Btn from '../Authentication/Btn';
+import Btn from '../Button/Btn';
 import ToggleTheme from '../Theme/ToggleTheme';
 
 const Logobox = styled.span`
@@ -43,7 +43,7 @@ const Logo = () => {
 
 const Navbar = () => {
   return (
-    <Box position='fixed' as='nav' w='100%' wrap='wrap'>
+    <Box position='static' as='nav' w='100%' wrap='wrap'>
       <Container
         display='flex'
         p={4}

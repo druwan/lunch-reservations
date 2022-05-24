@@ -1,12 +1,13 @@
+import { Box } from '@chakra-ui/react';
 import Navbar from './component/Navbar/Navbar';
-// import HomeView from './Views/HomeView';
+import HomeView from './Views/HomeView';
 
 const App = () => {
   return (
-    <div className='App'>
+    <Box>
       <Navbar />
-      {/* <HomeView /> */}
-    </div>
+      <HomeView />
+    </Box>
   );
 };
 
