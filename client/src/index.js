@@ -23,11 +23,18 @@ const slTheme = extendTheme({
   },
 });
 
+const authDomain = process.env.REACT_APP_AUTH0_DOMAIN;
+const authClientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={slTheme}>
-      <Auth0Provider>
+      <Auth0Provider
+        domain={authDomain}
+        clientId={authClientId}
+        redirectUri={window.location.origin}
+      >
         <App />
       </Auth0Provider>
     </ChakraProvider>
