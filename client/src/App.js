@@ -1,10 +1,11 @@
-import './App.css';
-import HomeView from './Views/HomeView';
+import Navbar from './component/Navbar/Navbar';
+// import HomeView from './Views/HomeView';
 
 const App = () => {
   return (
     <div className='App'>
-      <HomeView />
+      <Navbar />
+      {/* <HomeView /> */}
     </div>
   );
 };
