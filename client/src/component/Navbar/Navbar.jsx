@@ -1,3 +1,4 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import {
   Box,
   Container,
@@ -10,7 +11,8 @@ import {
 import styled from '@emotion/styled';
 
 import React from 'react';
-import AuthButton from '../Buttons/AuthButton';
+import LoginButton from '../Buttons/LoginButton';
+import LogoutButton from '../Buttons/LogoutButton';
 import ToggleTheme from '../Theme/ToggleTheme';
 
 const Logobox = styled.span`
@@ -42,6 +44,7 @@ const Logo = () => {
 };
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuth0();
   return (
     <Box position='static' as='nav' w='100%' wrap='wrap'>
       <Container
@@ -57,7 +60,8 @@ const Navbar = () => {
           </Heading>
         </Flex>
         <Box flex={1} align='right'>
-          <AuthButton />
+          {/* Somehow overwrites the auth0 session */}
+          {isAuthenticated ? <LogoutButton /> : <LoginButton />}
           <ToggleTheme />
         </Box>
       </Container>
