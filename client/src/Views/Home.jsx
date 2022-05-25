@@ -6,9 +6,9 @@ const Home = () => {
   return (
     <Container maxW={'container.xl'} centerContent>
       <Flex
-        height={'100vh'}
-        alignItems='center'
-        justifyContent={'space-around'}
+        alignItems={'center'}
+        justifyContent={'center'}
+        position={'relative'}
       >
         <ContentGrid />
       </Flex>

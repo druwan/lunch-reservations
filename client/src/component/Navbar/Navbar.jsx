@@ -1,6 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import {
-  Box,
   ButtonGroup,
   Container,
   Flex,
@@ -49,12 +48,22 @@ const Logo = () => {
 const Navbar = () => {
   const { isAuthenticated } = useAuth0();
   return (
-    <Box position='static' as='nav' w='100%' wrap='wrap'>
+    <Flex
+      position='sticky'
+      as='nav'
+      top={0}
+      w='full'
+      wrap='wrap'
+      direction={'column'}
+      style={{ borderBottom: 'solid 5px orange' }}
+    >
       <Container
         display='flex'
         p={4}
+        width='full'
         maxW='container.xl'
         wrap='wrap'
+        justifyContent={'center'}
         alignItems='center'
       >
         <Flex align='center' mr={5}>
@@ -69,7 +78,7 @@ const Navbar = () => {
           <ToggleTheme />
         </ButtonGroup>
       </Container>
-    </Box>
+    </Flex>
   );
 };
 
