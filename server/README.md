@@ -2,7 +2,6 @@
 
 ## Status
 
-- [] Add Basic CRUD
-- [] Implement Login
-- [] Implement Auth
-- [] Implement confirmation
+- Add Basic CRUD
+- Implement Login with Auth for customers who wants to save their orders
+- Implement Confirmation
