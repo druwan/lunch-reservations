@@ -6,7 +6,7 @@ export const jwtCheck = expressjwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: process.env.JWKS_URI,
+    jwksUri: process.env.AUTH_API_JWKS_URI,
   }),
   audience: process.env.AUTH_API_AUDIENCE,
   issuer: process.env.AUTH_API_DOMAIN,
