@@ -1,10 +1,12 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import {
   Box,
+  ButtonGroup,
   Container,
   Flex,
   Heading,
   Image,
+  Spacer,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -59,11 +61,12 @@ const Navbar = () => {
             <Logo />
           </Heading>
         </Flex>
-        <Box flex={1} align='right'>
+        <Spacer />
+        <ButtonGroup gap={2}>
           {/* Somehow overwrites the auth0 session */}
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}
           <ToggleTheme />
-        </Box>
+        </ButtonGroup>
       </Container>
     </Box>
   );
