@@ -38,7 +38,8 @@ const Logo = () => {
           fontSize='20'
           ml={3}
         >
-          Lunch Reservations මමපඞ
+          වෙලාව මදි
+          {/* Lunch Reservations */}
         </Text>
       </Logobox>
     </a>
