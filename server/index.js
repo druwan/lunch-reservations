@@ -11,12 +11,13 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors());
-app.use('/customers', customerRoutes);
+app.use('/api/customers', customerRoutes);
 
-app.use(jwtCheck);
 app.use(oAuth);
-app.get('/api/menu', (req, res) => {
-  res.json({ message: 'MenuEndpoint' });
+app.use(jwtCheck);
+
+app.get('/authorized', (req, res) => {
+  res.json({ message: 'Secured Resource' });
 });
 
 const dbConnect = async () => {
