@@ -49,13 +49,12 @@ const Navbar = () => {
   const { isAuthenticated } = useAuth0();
   return (
     <Flex
-      position='sticky'
+      // position='sticky'
       as='nav'
       top={0}
       w='full'
       wrap='wrap'
       direction={'column'}
-      style={{ borderBottom: 'solid 5px orange' }}
     >
       <Container
         display='flex'

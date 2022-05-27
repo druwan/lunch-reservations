@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   Flex,
   Heading,
@@ -11,8 +12,8 @@ import React from 'react';
 
 const ContentGrid = () => {
   return (
-    <Container maxW={'container.md'} as='main' alignItems={'flex-start'}>
-      <SimpleGrid columns={2} spacing={10} shadow={'outline'}>
+    <Container maxW={'container.xl'} as='main'>
+      <SimpleGrid columns={2} spacing={10}>
         {/* forEach MenuItem... MenuItems.map(dish => (dish.Image, dish.description))) */}
         <Flex>
           <Image
@@ -31,7 +32,7 @@ const ContentGrid = () => {
             add some button for Add To Order
           </Text>
         </Stack>
-        {/* <Box>
+        <Box>
           <Text>
             Menu Description with a list of ingredients and price, maybe even
             add some button for Add To Order
@@ -72,7 +73,7 @@ const ContentGrid = () => {
             objectFit={'fill'}
             rounded={'50px'}
           />
-        </Box> */}
+        </Box>
       </SimpleGrid>
     </Container>
   );
