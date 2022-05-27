@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema({
-  id: { type: String, required: true },
+  order_id: String,
   orderDate: { type: Date, default: new Date() },
-  dishes: [{ type: String, required: true }],
+  dishes: [mongoose.SchemaTypes.String],
 });
 
 const Order = mongoose.model('Order', orderSchema);
