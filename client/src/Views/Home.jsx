@@ -1,8 +1,21 @@
 import { Container, Flex } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ContentGrid from '../component/ContentGrid/ContentGrid';
 
 const Home = () => {
+  const [dishes, setDishes] = useState([]);
+
+  useEffect(() => {
+    const getDishes = async () => {
+      const response = await fetch(
+        'https://druwan-noroff-api.herokuapp.com/guitars'
+      );
+      const data = await response.json();
+      setDishes(data);
+    };
+    getDishes();
+  }, []);
+
   return (
     <Container maxW={'container.xl'} centerContent>
       <Flex
@@ -10,7 +23,7 @@ const Home = () => {
         justifyContent={'center'}
         position={'relative'}
       >
-        <ContentGrid />
+        <ContentGrid dishes={dishes} />
       </Flex>
     </Container>
   );
