@@ -5,7 +5,7 @@ const dishSchema = new mongoose.Schema({
   name: { type: String, required: true },
   isVegan: Boolean,
   image: { type: String, required: true },
-  spicy: { type: Boolean, required: true },
+  spicy: { type: Number, required: true },
 });
 
 export default mongoose.model('Dish', dishSchema);
