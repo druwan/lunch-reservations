@@ -101,6 +101,27 @@ export const getOneCustomer = async (req, res) => {
   }
 };
 
+export const updateCustomer = async (req, res) => {
+  const customer_id = req.params.id;
+  try {
+    Customer.findByIdAndUpdate(
+      customer_id,
+      {
+        $set: req.body,
+      },
+      { new: true },
+      (err, result) => {
+        if (err) {
+          res.status(500).json({ message: error.message });
+        }
+        res.status(200).json(result);
+      }
+    );
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 export const deleteCustomer = async (req, res) => {
   const id = req.params.id;
   try {
