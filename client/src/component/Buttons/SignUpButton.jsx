@@ -11,7 +11,7 @@ const SignUpButton = () => {
     return (
       <Button
         colorScheme={'facebook'}
-        onClick={loginWithRedirect({ screen_hint: 'signup' })}
+        onClick={() => loginWithRedirect({ screen_hint: 'signup' })}
       >
         Sign Up
       </Button>
@@ -20,7 +20,7 @@ const SignUpButton = () => {
   return (
     <Button
       colorScheme={'yellow'}
-      onClick={loginWithRedirect({ screen_hint: 'signup' })}
+      onClick={() => loginWithRedirect({ screen_hint: 'signup' })}
     >
       Sign Up
     </Button>
