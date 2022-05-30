@@ -67,9 +67,9 @@ const ContentGrid = ({ dishes }) => {
       <SimpleGrid columns={2} spacing={4}>
         {dishes.map((dish, index) =>
           index % 2 !== 0 ? (
-            <ContentCard dish={dish} />
+            <ContentCard key={dish.id} dish={dish} />
           ) : (
-            <ContentReverseCard dish={dish} />
+            <ContentReverseCard key={dish.id} dish={dish} />
           )
         )}
       </SimpleGrid>
