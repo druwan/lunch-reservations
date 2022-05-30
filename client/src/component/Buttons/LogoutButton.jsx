@@ -11,7 +11,7 @@ const LogoutButton = () => {
     return (
       <Button
         colorScheme={'facebook'}
-        onClick={logout({ returnTo: window.location.origin })}
+        onClick={() => logout({ returnTo: window.location.origin })}
       >
         Logout
       </Button>
@@ -20,7 +20,7 @@ const LogoutButton = () => {
   return (
     <Button
       colorScheme={'yellow'}
-      onClick={logout({ returnTo: window.location.origin })}
+      onClick={() => logout({ returnTo: window.location.origin })}
     >
       Logout
     </Button>
