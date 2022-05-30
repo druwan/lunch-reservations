@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import Navbar from './component/Navbar/Navbar';
-import Home from './Views/Home';
+import Home from './views/Home';
 
 const App = () => {
   return (
