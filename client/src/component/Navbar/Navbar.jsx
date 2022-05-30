@@ -29,10 +29,10 @@ const Logobox = styled.span`
 `;
 
 const Logo = () => {
-  const lunchPrintImg = ``; // ${useColorModeValue('', '-dark')}.png
+  const lunchPrintImg = `/images/Karapincha.png`; // ${useColorModeValue('', '-dark')}.png
   return (
     <Logobox>
-      <Image src={lunchPrintImg} objectFit={'cover'} alt='LogoType' />
+      <Image src={lunchPrintImg} w={'10%'} alt='LogoType' />
       <Text
         color={useColorModeValue('gray.800', 'slColor.slYellow')}
         fontSize='20'
