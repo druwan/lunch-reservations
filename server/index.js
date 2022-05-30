@@ -18,12 +18,12 @@ app.use('/api/customers', customerRoutes);
 app.use('/api/dishes', dishesRoutes);
 app.use('/api/orders', orderRoutes);
 
-// app.use(oAuth);
-// app.use(jwtCheck);
+app.use(oAuth);
+app.use(jwtCheck);
 
-// app.get('/authorized', (req, res) => {
-//   res.json({ message: 'Secured Resource' });
-// });
+app.get('/protected', jwtCheck, (req, res) => {
+  res.json({ message: 'Secured Resource' });
+});
 
 const dbConnect = async () => {
   try {
