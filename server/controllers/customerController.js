@@ -73,7 +73,6 @@ export const createCustomer = async (req, res) => {
       email: req.body.email,
     });
 
-    newCustomer.save();
     res
       .status(200)
       .send(`Successfully created new customer ${newCustomer.name}`);
