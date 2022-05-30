@@ -14,6 +14,8 @@ import styled from '@emotion/styled';
 import React from 'react';
 import LoginButton from '../Buttons/LoginButton';
 import LogoutButton from '../Buttons/LogoutButton';
+import ShowUserButton from '../Buttons/ShowUserButton';
+import SignUpButton from '../Buttons/SignUpButton';
 import ToggleTheme from '../Theme/ToggleTheme';
 
 const Logobox = styled.span`
@@ -73,7 +75,7 @@ const Navbar = () => {
         </Flex>
         <Spacer />
         <ButtonGroup gap={2}>
-          {/* Somehow overwrites the auth0 session */}
+          {!isAuthenticated ? <SignUpButton /> : <ShowUserButton />}
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}
           <ToggleTheme />
         </ButtonGroup>
