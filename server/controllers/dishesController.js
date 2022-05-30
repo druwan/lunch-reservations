@@ -38,3 +38,32 @@ export const getOneDish = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const updateDish = async (req, res) => {
+  const dish_id = req.params.id;
+  try {
+    Dish.findByIdAndUpdate(
+      dish_id,
+      { $set: req.body },
+      { new: true },
+      (err, result) => {
+        if (err) {
+          res.status(500).json({ message: error.message });
+        }
+        res.status(200).json(result);
+      }
+    );
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const deleteDish = async (req, res) => {
+  const dish_id = req.params.id;
+  try {
+    const dishToDelete = await Dish.findByIdAndDelete(dish_id);
+    res.status(200).send(`Successfully deleted dish ${dishToDelete.name}`);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
