@@ -5,10 +5,9 @@ import 'dotenv/config';
 import { jwtCheck } from './middlewares/jwtCheck.js';
 import { oAuth } from './middlewares/token.js';
 
-import Customer from './models/customerModel.js';
-
 import customerRoutes from './routes/customersRoutes.js';
 import dishesRoutes from './routes/dishesRoutes.js';
+import orderRoutes from './routes/ordersRoutes.js';
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -17,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/customers', customerRoutes);
 app.use('/api/dishes', dishesRoutes);
+app.use('/api/orders', orderRoutes);
 
 // app.use(oAuth);
 // app.use(jwtCheck);
@@ -34,21 +34,6 @@ const dbConnect = async () => {
     console.log('Error connecting to DB' + error);
   }
 };
-
-// const testUser = async () => {
-//   try {
-//     const user = new Customer({
-//       name: 'Testy',
-//       email: 'asd@email.com',
-//       password: '123',
-//       orders: ['asd', '123'],
-//     });
-//     await user.save();
-//     console.log(user);
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
 
 app.listen(port, () => {
   dbConnect();
