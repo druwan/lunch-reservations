@@ -31,19 +31,17 @@ const Logobox = styled.span`
 const Logo = () => {
   const lunchPrintImg = ``; // ${useColorModeValue('', '-dark')}.png
   return (
-    <a href='/'>
-      <Logobox>
-        <Image src={lunchPrintImg} objectFit={'cover'} alt='LogoType' />
-        <Text
-          color={useColorModeValue('gray.800', 'slColor.slYellow')}
-          fontSize='20'
-          ml={3}
-        >
-          වෙලාව මදි
-          {/* Lunch Reservations */}
-        </Text>
-      </Logobox>
-    </a>
+    <Logobox>
+      <Image src={lunchPrintImg} objectFit={'cover'} alt='LogoType' />
+      <Text
+        color={useColorModeValue('gray.800', 'slColor.slYellow')}
+        fontSize='20'
+        ml={3}
+      >
+        වෙලාව මදි
+        {/* Lunch Reservations */}
+      </Text>
+    </Logobox>
   );
 };
 
