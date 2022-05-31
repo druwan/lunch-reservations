@@ -12,9 +12,10 @@ The Technical goal is to learn more about React. How to create a full stack app 
 
 A customer should be able to
 
+- Login to be able to save orders
 - Select a timeslot for pickup
 - Select dishes from menu
-- Select paymentoption
+- Select payment option
 - Retrieve confirmation from email / text
 - Chat with support
 
@@ -22,7 +23,7 @@ A customer should be able to
 
 [MongoDB](https://cloud.mongodb.com/)
 
-[Mongoose](https://mongoosejs.com/)
+[Mongoosejs](https://mongoosejs.com/)
 
 [Express](https://expressjs.com/)
 
@@ -30,4 +31,4 @@ A customer should be able to
 
 [Auth0](https://auth0.com/)
 
-[#TBD]()
+[Node](https://nodejs.org/en/)
