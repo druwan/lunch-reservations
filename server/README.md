@@ -1,10 +1,24 @@
 # Lunch Reservations Back-End
 
-## Status
+## Roadmap
 
-- Add Basic CRUD
-  - Customer ✔
-  - Order
-  - Dishes
-- Implement Login with Auth for customers who wants to save their orders
+#### Add Basic CRUD
+
+Customer ✔
+
+Order ✔
+
+Dishes ✔
+
+#### Login
+
+For Customers who wants to save their orders
+
+- Frontend Login ✔
+- Backend Middleware
 - Implement Confirmation
+
+#### Checkout
+
+- Select time and day for pickup
+- Select payment option
