@@ -1,10 +1,20 @@
 # Lunch Reservations Front-End
 
-## Todos
+## Roadmap
 
-- Super basic layout
-- Styling
+#### Style
+
+- Super basic layout ✅
+- Styling ✅
 - Add Menu
+
+#### Login
+
+- Implement Login ✅
+- Implement Auth ✅
+
+#### Checkout
+
+- Implement Calendar
+- Implement Cart
 - Implement Confirmation
-- Implement Login
-- Implement Auth
