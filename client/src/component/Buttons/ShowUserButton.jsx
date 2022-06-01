@@ -6,24 +6,12 @@ import React from 'react';
 const ShowUserButton = () => {
   const { user } = useAuth0();
   const { colorMode } = useColorMode();
+  const colorScheme = colorMode === 'light' ? 'facebook' : 'yellow';
 
-  //  Switch on colormode
-  if (colorMode === 'light') {
-    return (
-      <Button
-        variant={'ghost'}
-        colorScheme={'facebook'}
-        leftIcon={<StarIcon />}
-        isDisabled={true}
-      >
-        {user.email}
-      </Button>
-    );
-  }
   return (
     <Button
       variant={'ghost'}
-      colorScheme={'yellow'}
+      colorScheme={colorScheme}
       leftIcon={<StarIcon />}
       isDisabled={true}
     >

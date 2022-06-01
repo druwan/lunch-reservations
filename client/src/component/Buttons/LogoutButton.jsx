@@ -5,21 +5,11 @@ import React from 'react';
 const LogoutButton = () => {
   const { colorMode } = useColorMode();
   const { logout } = useAuth0();
+  const colorScheme = colorMode === 'light' ? 'facebook' : 'yellow';
 
-  //  Switch on colormode
-  if (colorMode === 'light') {
-    return (
-      <Button
-        colorScheme={'facebook'}
-        onClick={() => logout({ returnTo: window.location.origin })}
-      >
-        Logout
-      </Button>
-    );
-  }
   return (
     <Button
-      colorScheme={'yellow'}
+      colorScheme={colorScheme}
       onClick={() => logout({ returnTo: window.location.origin })}
     >
       Logout
