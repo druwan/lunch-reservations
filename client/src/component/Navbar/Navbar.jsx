@@ -7,6 +7,7 @@ import {
   Image,
   Spacer,
   Text,
+  useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
@@ -47,17 +48,21 @@ const Logo = () => {
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth0();
+  const { colorMode } = useColorMode();
+
   return (
     <Flex
-      as='nav'
+      as='header'
       top={0}
       w='full'
-      wrap='wrap'
-      direction={'column'}
       position='sticky'
       zIndex={1}
+      display='block'
+      color
+      bg={colorMode === 'light' ? 'white' : 'gray.800'}
     >
       <Container
+        as='nav'
         display='flex'
         p={4}
         width='full'
