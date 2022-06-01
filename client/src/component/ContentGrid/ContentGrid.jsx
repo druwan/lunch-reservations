@@ -18,17 +18,17 @@ const ContentCard = ({ dish }) => {
           alt={`image of ${dish.model}`}
           objectFit={'fill'}
           rounded={'50px'}
+          maxH={'container.sm'}
         />
       </Flex>
-      <Stack>
+      <Stack maxW={'container.sm'}>
         <Heading as={'h2'} size={'md'} letterSpacing={'tight'}>
-          {`${dish.model}`}
+          {dish.isVegan ? `${dish.name} (Vegan)` : `${dish.name}`}
         </Heading>
         <Text as={'p'} letterSpacing={'tight'}>
-          {`${dish.manufacturer} - ${dish.model}`} - Body made of{' '}
-          {`${dish.materials.body}`} and the neck made of{' '}
-          {`${dish.materials.neck}`}. With fret material{' '}
-          {`${dish.materials.fretboard}`}
+          {dish.spicy > 0 ? `Spicyness ${dish.spicy}` : ''}
+          <br />
+          {`${dish.description}`}
         </Text>
       </Stack>
     </>
@@ -40,13 +40,12 @@ const ContentReverseCard = ({ dish }) => {
     <>
       <Stack>
         <Heading as={'h2'} size={'md'} letterSpacing={'tight'}>
-          {`${dish.model}`}
+          {dish.isVegan ? `${dish.name} (Vegan)` : `${dish.name}`}
         </Heading>
         <Text as={'p'} letterSpacing={'tight'}>
-          {`${dish.manufacturer} - ${dish.model}`} - Body made of{' '}
-          {`${dish.materials.body}`} and the neck made of{' '}
-          {`${dish.materials.neck}`}. With fret material{' '}
-          {`${dish.materials.fretboard}`}
+          {dish.spicy > 0 ? `Spicyness ${dish.spicy}` : ''}
+          <br />
+          {`${dish.description}`}
         </Text>
       </Stack>
       <Flex>
@@ -67,9 +66,9 @@ const ContentGrid = ({ dishes }) => {
       <SimpleGrid columns={2} spacing={4}>
         {dishes.map((dish, index) =>
           index % 2 !== 0 ? (
-            <ContentCard key={dish.id} dish={dish} />
+            <ContentCard key={dish._id} dish={dish} />
           ) : (
-            <ContentReverseCard key={dish.id} dish={dish} />
+            <ContentReverseCard key={dish._id} dish={dish} />
           )
         )}
       </SimpleGrid>

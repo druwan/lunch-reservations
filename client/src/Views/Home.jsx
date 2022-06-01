@@ -7,9 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const getDishes = async () => {
-      const response = await fetch(
-        'https://druwan-noroff-api.herokuapp.com/guitars'
-      );
+      const response = await fetch('http://localhost:3001/api/dishes');
       const data = await response.json();
       setDishes(data);
     };
