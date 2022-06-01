@@ -5,7 +5,11 @@ const AddToLunchButton = () => {
   const { colorMode } = useColorMode();
   const colorScheme = colorMode === 'light' ? 'slBlue' : 'slOrange';
 
-  return <Button colorScheme={colorScheme}>Add to Lunch</Button>;
+  return (
+    <Button colorScheme={colorScheme} maxW={'25%'}>
+      Add to Lunch
+    </Button>
+  );
 };
 
 export default AddToLunchButton;

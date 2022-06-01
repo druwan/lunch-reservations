@@ -14,13 +14,13 @@ import AddToLunchButton from '../Buttons/AddToLunchButton';
 const ContentCard = ({ dish }) => {
   return (
     <>
-      <Flex>
+      <Flex justify={'center'}>
         <Image
           src={`${dish.image}`}
           alt={`image of ${dish.model}`}
           objectFit={'fill'}
           rounded={'50px'}
-          maxH={'container.sm'}
+          maxH={'300px'}
         />
       </Flex>
       <Stack maxW={'container.sm'}>
@@ -54,12 +54,13 @@ const ContentReverseCard = ({ dish }) => {
         <Spacer />
         <AddToLunchButton />
       </Stack>
-      <Flex>
+      <Flex justify={'center'}>
         <Image
           src={`${dish.image}`}
           alt='placeholder image'
           objectFit={'fill'}
           rounded={'50px'}
+          maxH={'300px'}
         />
       </Flex>
     </>
