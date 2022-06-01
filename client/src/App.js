@@ -9,9 +9,10 @@ const App = () => {
       direction={'column'}
       minHeight={'100vh'}
       bg={useColorModeValue('slOrange.200', 'slBlue.900')}
+      paddingX={'10'}
     >
       <Navbar />
-      <Box mt={8}>
+      <Box>
         <Home />
         <Footer />
       </Box>
