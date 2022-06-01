@@ -9,6 +9,7 @@ export const createDish = async (req, res) => {
 
     const newDish = await Dish.create({
       name: req.body.name,
+      description: req.body.description,
       image: req.body.image,
       spicy: req.body.spicy,
     });
