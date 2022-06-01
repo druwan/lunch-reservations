@@ -5,7 +5,7 @@ import React from 'react';
 const SignUpButton = () => {
   const { loginWithRedirect } = useAuth0();
   const { colorMode } = useColorMode();
-  const colorScheme = colorMode === 'light' ? 'facebook' : 'yellow';
+  const colorScheme = colorMode === 'light' ? 'slBlue' : 'slOrange';
 
   return (
     <Button

@@ -5,7 +5,7 @@ import React from 'react';
 const LogoutButton = () => {
   const { colorMode } = useColorMode();
   const { logout } = useAuth0();
-  const colorScheme = colorMode === 'light' ? 'facebook' : 'yellow';
+  const colorScheme = colorMode === 'light' ? 'slRed' : 'slRed';
 
   return (
     <Button

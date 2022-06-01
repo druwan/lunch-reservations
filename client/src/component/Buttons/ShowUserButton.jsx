@@ -6,7 +6,7 @@ import React from 'react';
 const ShowUserButton = () => {
   const { user } = useAuth0();
   const { colorMode } = useColorMode();
-  const colorScheme = colorMode === 'light' ? 'facebook' : 'yellow';
+  const colorScheme = colorMode === 'light' ? 'slRed' : 'slOrange';
 
   return (
     <Button

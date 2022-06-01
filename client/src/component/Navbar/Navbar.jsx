@@ -35,7 +35,7 @@ const Logo = () => {
     <Logobox>
       <Image src={lunchPrintImg} w={'10%'} alt='LogoType' />
       <Text
-        color={useColorModeValue('gray.800', 'slColor.slYellow')}
+        color={useColorModeValue('slBlue.800', 'slOrange.500')}
         fontSize='20'
         ml={3}
       >
@@ -59,7 +59,7 @@ const Navbar = () => {
       zIndex={1}
       display='block'
       color
-      bg={colorMode === 'light' ? 'white' : 'gray.800'}
+      bg={colorMode === 'light' ? 'slOrange.200' : 'slBlue.900'}
     >
       <Container
         as='nav'

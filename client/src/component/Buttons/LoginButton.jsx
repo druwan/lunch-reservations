@@ -5,7 +5,7 @@ import React from 'react';
 const LoginButton = () => {
   const { colorMode } = useColorMode();
   const { loginWithRedirect } = useAuth0();
-  const colorScheme = colorMode === 'light' ? 'facebook' : 'yellow';
+  const colorScheme = colorMode === 'light' ? 'slBlue' : 'slOrange';
 
   return (
     <Button colorScheme={colorScheme} onClick={loginWithRedirect}>

@@ -4,10 +4,12 @@ import {
   Heading,
   Image,
   SimpleGrid,
+  Spacer,
   Stack,
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
+import AddToLunchButton from '../Buttons/AddToLunchButton';
 
 const ContentCard = ({ dish }) => {
   return (
@@ -30,6 +32,8 @@ const ContentCard = ({ dish }) => {
           <br />
           {`${dish.description}`}
         </Text>
+        <Spacer />
+        <AddToLunchButton />
       </Stack>
     </>
   );
@@ -47,6 +51,8 @@ const ContentReverseCard = ({ dish }) => {
           <br />
           {`${dish.description}`}
         </Text>
+        <Spacer />
+        <AddToLunchButton />
       </Stack>
       <Flex>
         <Image
@@ -63,7 +69,7 @@ const ContentReverseCard = ({ dish }) => {
 const ContentGrid = ({ dishes }) => {
   return (
     <Container maxW={'container.lg'} as='main'>
-      <SimpleGrid columns={2} spacing={4}>
+      <SimpleGrid columns={2} spacingX={'4'} spacingY={'20'}>
         {dishes.map((dish, index) =>
           index % 2 !== 0 ? (
             <ContentCard key={dish._id} dish={dish} />
