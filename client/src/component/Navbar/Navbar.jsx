@@ -13,6 +13,7 @@ import {
 import styled from '@emotion/styled';
 
 import React from 'react';
+import CartButton from '../Buttons/CartButton';
 import LoginButton from '../Buttons/LoginButton';
 import LogoutButton from '../Buttons/LogoutButton';
 import ShowUserButton from '../Buttons/ShowUserButton';
@@ -80,6 +81,7 @@ const Navbar = () => {
         <ButtonGroup gap={2}>
           {!isAuthenticated ? <SignUpButton /> : <ShowUserButton />}
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+          <CartButton />
           <ToggleTheme />
         </ButtonGroup>
       </Container>
