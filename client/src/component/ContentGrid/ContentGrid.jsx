@@ -33,7 +33,7 @@ const ContentCard = ({ dish }) => {
           {`${dish.description}`}
         </Text>
         <Spacer />
-        <AddToLunchButton />
+        <AddToLunchButton dish={dish} />
       </Stack>
     </>
   );
@@ -52,7 +52,7 @@ const ContentReverseCard = ({ dish }) => {
           {`${dish.description}`}
         </Text>
         <Spacer />
-        <AddToLunchButton />
+        <AddToLunchButton dish={dish} />
       </Stack>
       <Flex justify={'center'}>
         <Image

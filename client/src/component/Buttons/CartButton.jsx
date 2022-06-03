@@ -9,7 +9,7 @@ const CartButton = () => {
   const invertColorScheme = colorMode === 'light' ? 'slOrange' : 'slRed';
 
   return (
-    <Button colorScheme={colorScheme}>
+    <Button colorScheme={colorScheme} onClick={() => console.log('clicked')}>
       <Icon as={FaShoppingCart} w={6} h={6} />
       <Text>
         <Badge
