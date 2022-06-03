@@ -7,6 +7,7 @@ const dishSchema = new mongoose.Schema({
   description: { type: String, required: true },
   image: { type: String, required: true },
   spicy: { type: Number, required: true },
+  price: { type: Number, required: true },
 });
 
 export default mongoose.model('Dish', dishSchema);
