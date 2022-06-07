@@ -14,7 +14,7 @@ const App = () => {
       bg={useColorModeValue('slOrange.200', 'slBlue.900')}
       paddingX={'10'}
     >
-      <Navbar cart={cart} />
+      <Navbar cart={cart} setCart={setCart} />
       <Box>
         <Home cart={cart} setCart={setCart} />
         <Footer />

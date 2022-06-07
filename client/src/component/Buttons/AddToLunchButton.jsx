@@ -17,7 +17,7 @@ const AddToLunchButton = ({ dish, cart, setCart }) => {
 
   const addToCart = (selectedDish) => {
     let newCart = [...cart];
-    if (newCart.includes(selectedDish)) {
+    if (newCart.includes(selectedDish.name)) {
       console.log('Already in -> Add 1 in quantity');
     } else {
       console.log('Add to Cart');
