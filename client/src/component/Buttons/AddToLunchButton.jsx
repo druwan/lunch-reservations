@@ -21,7 +21,7 @@ const AddToLunchButton = ({ dish, cart, setCart }) => {
       console.log('Already in -> Add 1 in quantity');
     } else {
       console.log('Add to Cart');
-      newCart.push(selectedDish.name);
+      newCart.push(selectedDish);
     }
     setCart(newCart);
   };
