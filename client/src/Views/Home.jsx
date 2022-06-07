@@ -2,7 +2,7 @@ import { Container, Flex } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import ContentGrid from '../component/ContentGrid/ContentGrid';
 
-const Home = () => {
+const Home = ({ cart, setCart }) => {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Home = () => {
         justifyContent={'center'}
         position={'relative'}
       >
-        <ContentGrid dishes={dishes} />
+        <ContentGrid dishes={dishes} cart={cart} setCart={setCart} />
       </Flex>
     </Container>
   );

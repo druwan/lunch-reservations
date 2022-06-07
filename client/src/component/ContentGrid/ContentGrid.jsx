@@ -11,7 +11,7 @@ import {
 import React from 'react';
 import AddToLunchButton from '../Buttons/AddToLunchButton';
 
-const ContentCard = ({ dish }) => {
+const ContentCard = ({ dish, cart, setCart }) => {
   return (
     <>
       <Flex justify={'center'}>
@@ -33,13 +33,13 @@ const ContentCard = ({ dish }) => {
           {`${dish.description}`}
         </Text>
         <Spacer />
-        <AddToLunchButton dish={dish} />
+        <AddToLunchButton dish={dish} cart={cart} setCart={setCart} />
       </Stack>
     </>
   );
 };
 
-const ContentReverseCard = ({ dish }) => {
+const ContentReverseCard = ({ dish, cart, setCart }) => {
   return (
     <>
       <Stack>
@@ -52,7 +52,7 @@ const ContentReverseCard = ({ dish }) => {
           {`${dish.description}`}
         </Text>
         <Spacer />
-        <AddToLunchButton dish={dish} />
+        <AddToLunchButton dish={dish} cart={cart} setCart={setCart} />
       </Stack>
       <Flex justify={'center'}>
         <Image
@@ -67,15 +67,25 @@ const ContentReverseCard = ({ dish }) => {
   );
 };
 
-const ContentGrid = ({ dishes }) => {
+const ContentGrid = ({ dishes, cart, setCart }) => {
   return (
     <Container maxW={'container.lg'} as='main'>
       <SimpleGrid columns={2} spacingX={'4'} spacingY={'20'}>
         {dishes.map((dish, index) =>
           index % 2 !== 0 ? (
-            <ContentCard key={dish._id} dish={dish} />
+            <ContentCard
+              key={dish._id}
+              dish={dish}
+              cart={cart}
+              setCart={setCart}
+            />
           ) : (
-            <ContentReverseCard key={dish._id} dish={dish} />
+            <ContentReverseCard
+              key={dish._id}
+              dish={dish}
+              cart={cart}
+              setCart={setCart}
+            />
           )
         )}
       </SimpleGrid>

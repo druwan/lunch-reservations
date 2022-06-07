@@ -3,13 +3,13 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 import React from 'react';
 
-const CartButton = () => {
+const CartButton = ({ cart }) => {
   const { colorMode } = useColorMode();
   const colorScheme = colorMode === 'light' ? 'slBlue' : 'slOrange';
   const invertColorScheme = colorMode === 'light' ? 'slOrange' : 'slRed';
 
   return (
-    <Button colorScheme={colorScheme} onClick={() => console.log('clicked')}>
+    <Button colorScheme={colorScheme} onClick={() => console.log(cart)}>
       <Icon as={FaShoppingCart} w={6} h={6} />
       <Text>
         <Badge
@@ -21,7 +21,7 @@ const CartButton = () => {
           fontWeight={'bold'}
           borderRadius={'lg'}
         >
-          2
+          {cart.length}
         </Badge>
       </Text>
     </Button>

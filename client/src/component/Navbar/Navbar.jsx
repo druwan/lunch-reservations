@@ -47,7 +47,7 @@ const Logo = () => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   const { isAuthenticated } = useAuth0();
   const { colorMode } = useColorMode();
 
@@ -81,7 +81,7 @@ const Navbar = () => {
         <ButtonGroup gap={2}>
           {!isAuthenticated ? <SignUpButton /> : <ShowUserButton />}
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-          <CartButton />
+          <CartButton cart={cart} />
           <ToggleTheme />
         </ButtonGroup>
       </Container>
