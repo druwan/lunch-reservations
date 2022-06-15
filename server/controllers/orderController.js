@@ -22,7 +22,7 @@ export const getAllOrders = async (req, res) => {
 };
 
 export const getOneOrder = async (req, res) => {
-  const order_id = req.params.order_id;
+  const order_id = req.params.id;
   try {
     const order = await Order.findById(order_id);
     res.status(200).json(order);
