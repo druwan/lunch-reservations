@@ -15,7 +15,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { FaShoppingCart } from 'react-icons/fa';
-
+import axios from 'axios';
 import React from 'react';
 import CartTable from '../CartTable/CartTable';
 
@@ -25,6 +25,22 @@ const CartButton = ({ cart, setCart }) => {
   const invertColorScheme = colorMode === 'light' ? 'slOrange' : 'slRed';
 
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const saveOrder = async (cart) => {
+    // save order
+    try {
+      await axios({
+        method: 'POST',
+        url: process.env.REACT_APP_SERVER_URL + '/api/orders',
+        data: {
+          dishes: cart,
+          fulfilled: true,
+        },
+      });
+    } catch (error) {
+      console.error(error.response.data.message);
+    }
+  };
 
   return (
     <Button colorScheme={colorScheme} onClick={onOpen}>
@@ -39,7 +55,9 @@ const CartButton = ({ cart, setCart }) => {
 
           <ModalFooter>
             <ButtonGroup>
-              <Button colorScheme={colorScheme}>Pay</Button>
+              <Button colorScheme={colorScheme} onClick={() => saveOrder(cart)}>
+                Pay
+              </Button>
               <Button colorScheme={colorScheme} onClick={() => setCart([])}>
                 Clear Cart
               </Button>
