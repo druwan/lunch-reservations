@@ -17,21 +17,27 @@ const Home = ({ cart, setCart }) => {
     getDishes();
   }, []);
 
-  if (isAuthenticated) {
-    // create user
-    try {
-      axios({
-        method: 'POST',
-        url: process.env.REACT_APP_SERVER_URL + '/api/customers',
-        data: {
-          name: user.nickname,
-          email: user.email,
-        },
-      });
-    } catch (error) {
-      console.error(error.response.data.message);
+  // create user
+  useEffect(() => {
+    if (isAuthenticated) {
+      const createCustomer = async () => {
+        try {
+          await axios({
+            method: 'POST',
+            url: process.env.REACT_APP_SERVER_URL + '/api/customers',
+            data: {
+              name: user.nickname,
+              email: user.email,
+            },
+          });
+        } catch (error) {
+          // Already exists? just continue
+          console.log(error.response.data.message);
+        }
+      };
+      createCustomer();
     }
-  }
+  }, [isAuthenticated, user]);
 
   return (
     <Container maxW={'container.xl'} centerContent>
