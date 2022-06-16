@@ -14,14 +14,14 @@ Dishes ✔
 
 For Customers who wants to save their orders
 
-- Frontend Login ✔
+- Frontend Login ✅
 - Backend Middleware to connect with frontend
-  - Save new users to DB
+  - Save new users to DB ✅
   - Always save orders
 - Implement Confirmation
 
 #### Checkout
 
-- Select time and day for pickup
+- Select day and time for pickup
 - Select payment option
-  - Stripe?
+  - Stripe? Nets? 
