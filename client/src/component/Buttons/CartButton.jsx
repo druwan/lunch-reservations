@@ -28,15 +28,13 @@ const CartButton = ({ cart, setCart }) => {
 
   const saveOrder = async (cart) => {
     // save order
+    const url = process.env.REACT_APP_SERVER_URL + '/api/orders';
+    const postOptions = {
+      dishes: cart,
+      fulfilled: true,
+    };
     try {
-      await axios({
-        method: 'POST',
-        url: process.env.REACT_APP_SERVER_URL + '/api/orders',
-        data: {
-          dishes: cart,
-          fulfilled: true,
-        },
-      });
+      await axios.post(url, postOptions);
     } catch (error) {
       console.error(error.response.data.message);
     }
