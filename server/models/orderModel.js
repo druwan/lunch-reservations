@@ -1,10 +1,7 @@
 import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema({
-  order_id: {
-    type: String,
-    unique: true,
-  },
+  order_id: String,
   orderDate: { type: Date, default: new Date() },
   dishes: {
     type: [mongoose.SchemaTypes.ObjectId],
