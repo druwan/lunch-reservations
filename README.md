@@ -2,6 +2,9 @@
 
 A MERN Project to deeper learn the Stack.
 
+https://user-images.githubusercontent.com/30087790/174082651-37eef32f-de58-4073-b5c4-6e05136f5cf3.mp4
+
+
 ## Goal
 
 Goal of the app is to allow customers to select a timeslot for their takeaway meal. This will help the customers and the kitchen to better plan out their day.
@@ -32,3 +35,6 @@ A customer should be able to
 [Auth0](https://auth0.com/)
 
 [Node](https://nodejs.org/en/)
+
+
+
