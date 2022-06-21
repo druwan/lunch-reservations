@@ -19,16 +19,29 @@ A customer should be able to
 - Retrieve confirmation from email / text
 - Chat with support
 
-#### Stack
+## Backend stack
+<a href="https://www.mongodb.com/cloud">
+  <img src="./client/public/images/logos/mongodb.svg" alt="Mongo DB" width="300" />
+</a>
 
-[MongoDB](https://cloud.mongodb.com/)
+<a href="http://expressjs.com/">
+<img src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" alt="Express" width="300" />
+</a>
 
-[Mongoosejs](https://mongoosejs.com/)
+<a href="https://auth0.com/">
+  <img src="./client/public/images/logos/auth0.svg" alt="Mongo DB" width="200" />
+</a>
 
-[Express](https://expressjs.com/)
+<a href="https://nodejs.org/en/">
+  <img src="./client/public/images/logos/nodejs-icon.svg" alt="Node JS" width="50" />
+</a>
 
-[React](https://reactjs.org/)
 
-[Auth0](https://auth0.com/)
+## Frontend stack
+<a href="https://reactjs.org/">
+  <img src="./client/public/images/logos/react.svg" alt="React" width="100" />
+</a>
 
-[Node](https://nodejs.org/en/)
+<a href="https://chakra-ui.com">
+  <img src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logo-colored.svg" alt="Chakra UI" width="300" />
+</a>
